@@ -1,9 +1,6 @@
-
 <?php
-	$servidor = "localhost";
-	$usuario = "root";
-	$clave = "";
-	$dbname = "cancionero";
+$mysqli = new mysqli("localhost", "root", "", "empresa");
+if ($mysqli->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 	
-	//Criar a conexao
-	$conn = mysqli_connect($servidor, $usuario, $clave, $dbname);
+}
